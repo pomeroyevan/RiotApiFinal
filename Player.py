@@ -17,7 +17,6 @@ class player:
         for game in self.games:
             newm = match(game, key=self.key)
             if f"{newm.raw.get('info').get('tft_game_type')}" == 'pairs':
-                print('adding')
                 matches.update({game : newm}) #creates match objects from gameIDs in dictionary
         return matches
 
@@ -29,18 +28,14 @@ class player:
         self.Name = SumName
         self.key = key
         self.raw = self.getRaw()
-        print('got json')
         self.puu = self.raw.get("puuid")
         self.games = self.getGames()
-        print('got games')
         self.matches = self.makeMatchList()
-        print(self.matches)
+
         
 
     def synergy(self):
-        print("made it")
         freq = {}
-        print(self.matches)
         matchfiles = {"Partners":{}}
         for m in self.matches:
             group = 0
@@ -53,7 +48,6 @@ class player:
                         if pn.get('partner_group_id') == group:
                             p2 = pn.get('puuid')
                             if p2 != self.puu:
-                                print('in')
                                 if (p2 not in matchfiles["Partners"].keys()):
                                     matchfiles["Partners"][p2] = {"Games": [self.matches[m].raw]}
                                 else:
@@ -64,9 +58,9 @@ class player:
                                 else:
                                     freq[p2] = [1,int(pn.get('placement'))]
                             else:
-                                print('superno')
+                                pass
                         else:
-                            print('nope')
+                            pass
         for syn in freq:
             freq[syn][1] = round(int(freq[syn][1])/int(freq[syn][0])/2, 3)
 
