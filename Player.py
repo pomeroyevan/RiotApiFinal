@@ -1,5 +1,5 @@
 import requests as r
-from Consts import SummonerByName, GamesByPUU
+from Constants import SummonerByName, GamesByPUU
 from Match import match
 import json
 from tkinter import filedialog

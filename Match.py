@@ -1,4 +1,4 @@
-from Consts import MatchByGameID
+from Constants import MatchByGameID
 import requests as r
 
 

@@ -9,7 +9,6 @@ class LoginPage(tk.Frame):
         self.controller = controller
 
         self.create_widgets()
-        self.api_entry.focus()
         self.help_text = "Go to the Riot Developer Portal and login."\
                          "There you will find an API Key. Paste it here"\
                          "to access.\n\nNote: You must have a registered"\
@@ -90,7 +89,7 @@ class LoginPage(tk.Frame):
         # if request is valid, continue to player page
         if testQ == 200:
             self.controller.key = api_key
-            self.controller.show_page("PlayerPage")
+            self.controller.show_page("SummonerSearch")
         else:
             # handle invalid api key
             self.invalid_label.config(text="Invalid API key")

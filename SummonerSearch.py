@@ -1,11 +1,11 @@
 import tkinter as tk
 import requests
 from Player import player
-from Consts import SummonerByName
-from Consts import ProfileBYpuu
+from Constants import SummonerByName
+from Constants import ProfileBYpuu
 
 
-class PlayerPage(tk.Frame):
+class SummonerSearch(tk.Frame):
     """Page to search for match data by player"""
     def __init__(self, parent, controller):
         """Initialize the page"""

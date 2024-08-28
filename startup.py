@@ -1,6 +1,6 @@
 import tkinter as tk
 from loginPage import LoginPage
-from PlayerPage import PlayerPage
+from SummonerSearch import SummonerSearch
 
 
 class DoubleDownTFT(tk.Tk):
@@ -21,9 +21,9 @@ class DoubleDownTFT(tk.Tk):
         self.pages["LoginPage"] = page
         page.grid(row=0, column=0, sticky="nsew")
 
-        # Create player page
-        next_page = PlayerPage(parent=self.container, controller=self)
-        self.pages["PlayerPage"] = next_page
+        # Create Summoner Search page
+        next_page = SummonerSearch(parent=self.container, controller=self)
+        self.pages["SummonerSearch"] = next_page
         next_page.grid(row=0, column=0, sticky="nsew")
 
         # Show the login page
