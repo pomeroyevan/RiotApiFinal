@@ -46,7 +46,6 @@ class LoginPage(tk.Frame):
         api_key = self.api_entry.get()
         qString = f'https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/thenucleartoast/NA1?api_key={api_key}'
         testQ = requests.get(qString).status_code
-        print(testQ, qString)
         if testQ == 200:
             self.controller.key = api_key
             self.controller.show_page("PlayerPage")
