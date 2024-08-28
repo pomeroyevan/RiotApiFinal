@@ -4,7 +4,6 @@ import requests as r
 class match:
 
     def getMatches(self): #get Match from gameID
-        print('getting match')
         return r.get(MatchByGameID(self.id, key = self.key)).json()
 
 
