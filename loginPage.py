@@ -76,8 +76,8 @@ class LoginPage(tk.Frame):
     def record_input(self, key_input):
         api_key = self.api_entry.get()
         qString = f"https://americas.api.riotgames.com/riot/"\
-                  "account/v1/accounts/by-riot-id/thenucleartoast/"\
-                  "NA1?api_key={api_key}"
+                  f"account/v1/accounts/by-riot-id/thenucleartoast/"\
+                  f"NA1?api_key={api_key}"
         testQ = requests.get(qString).status_code
         if testQ == 200:
             self.controller.key = api_key

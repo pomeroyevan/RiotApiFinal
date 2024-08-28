@@ -16,7 +16,7 @@ class player:
         for game in self.games:
             newm = match(game, key=self.key)
             if f"{newm.raw.get('info').get('tft_game_type')}" == 'pairs':
-                matches.update({game: newm}) 
+                matches.update({game: newm})
                 # creates match objects from gameIDs in dictionary
         return matches
 
@@ -71,15 +71,3 @@ class player:
             json.dump(matchfiles, file)
 
         return freq
-
-
-
-
-        
-
-
-
-
-
-
-

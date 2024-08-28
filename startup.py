@@ -19,7 +19,7 @@ class DoubleDownTFT(tk.Tk):
         # Create and add pages
         page = LoginPage(parent=self.container, controller=self)
         self.pages["LoginPage"] = page
-        page.grid(row=0, column=0, sticky="nsew") 
+        page.grid(row=0, column=0, sticky="nsew")
 
         next_page = PlayerPage(parent=self.container, controller=self)
         self.pages["PlayerPage"] = next_page

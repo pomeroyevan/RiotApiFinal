@@ -13,7 +13,12 @@ class PlayerPage(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        self.label = tk.Label(self, text="Player Username:", fg="#99ccff", bg="#333333", font=("Helvetica", 12), justify="center")
+        self.label = tk.Label(self,
+                              text="Player Username:",
+                              fg="#99ccff",
+                              bg="#333333",
+                              font=("Helvetica", 12),
+                              justify="center")
         self.label.grid(row=0, column=0, pady=10)
 
         self.name_entry = tk.Entry(self)
@@ -32,7 +37,7 @@ class PlayerPage(tk.Frame):
         else:
             # print(userQ, testQ.json(), testQ.status_code)
             pass
-      
+
     def printSynergy(self):
         R = 2
         for puu in self.syn:
@@ -40,12 +45,13 @@ class PlayerPage(tk.Frame):
                 ProfileBYpuu(puu, key=self.controller.key)).json().get(
                     'gameName')
             temp = tk.Label(self,
-                             text=f"{summonername} |
-                               games: {self.syn[puu][0]}  |
-                                 avg place: {self.syn[puu][1]}",
-                                   fg="#99ccff", bg="#333333",
-                                     font=("Helvetica", 12), justify="left")
+                            text=f"{
+                                summonername} | games: {
+                                    self.syn[puu][0]}  | avg place: {
+                                        self.syn[puu][1]}",
+                            fg="#99ccff",
+                            bg="#333333",
+                            font=("Helvetica", 12),
+                            justify="left")
             temp.grid(row=R, column=0, pady=10)
             R += 1
-
-            
