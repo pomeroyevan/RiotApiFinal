@@ -1,8 +1,7 @@
 import tkinter as tk
-import webbrowser
-import requests
 from loginPage import LoginPage
 from PlayerPage import PlayerPage
+
 
 class DoubleDownTFT(tk.Tk):
     def __init__(self):
