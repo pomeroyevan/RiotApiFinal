@@ -54,10 +54,9 @@ class SummonerSearch(tk.Frame):
                 ProfileBYpuu(puu, key=self.controller.key)).json().get(
                     'gameName')
             temp = tk.Label(self,
-                            text=f"{
-                                summonername} | games: {
-                                    self.syn[puu][0]}  | avg place: {
-                                        self.syn[puu][1]}",
+                            text= f"{summonername}"\
+                                  f" | games: {self.syn[puu][0]}"\
+                                  f"  | avg place: {self.syn[puu][1]}",
                             fg="#99ccff",
                             bg="#333333",
                             font=("Helvetica", 12),
